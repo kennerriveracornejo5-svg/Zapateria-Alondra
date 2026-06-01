@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Zapatillas | Promociones Imperdibles</title>
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/paginas.css" />
+    <link rel="stylesheet" href="CSS/home.css" />
+  </head>
+  <body>
+    <!-- MENÚ DE NAVEGACIÓN (NAVBAR) -->
+    <header class="navbar-header">
+      <div class="navbar-container">
+        <a href="index.html" class="logo">ALONDRA<span>Zapatería</span></a>
+
+        <!-- BOTÓN MENÚ MÓVIL -->
+        <button
+          class="menu-toggle"
+          id="mobile-menu"
+          aria-label="Abrir menú"
+          style="font-size: 30px; cursor: pointer"
+        >
+          ☰
+        </button>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="mujer.html" class="nav-link">Mujer</a>
+          <a href="varon.html" class="nav-link">Varón</a>
+          <a href="niño.html" class="nav-link">Niño</a>
+          <a href="promociones.html" class="nav-link promo">Promociones</a>
+          <a href="tiendas.html" class="nav-link">Nuestras Tiendas</a>
+          <a href="emprendedores.html" class="nav-link emprendedor"
+            >Zona Emprendedores</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- BANNER EXCLUSIVO DE PROMOCIONES -->
+<section class="banner-ofertas">
+  <div class="banner-container">
+    <div class="banner-content">
+ 
+  
+    </div>
+  </div>
+  <style>
+    /* Configuración General del Banner */
+.banner-ofertas {
+  width: 100%;
+  min-height: 450px;
+  background-image: url('img/baner_novedades.png'); /* Reemplaza con la ruta de tu imagen */
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  font-family: 'Arial', sans-serif; /* Puedes cambiar la tipografía a la de tu web */
+  box-sizing: border-box;
+}
+
+.banner-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.banner-content {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Tipografía y Colores Corporativos */
+.banner-title {
+  color: #0c2340; /* Azul Marino Oscuro de Alondra */
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 25px 0;
+  letter-spacing: 0.5px;
+}
+
+.banner-title .highlight {
+  color: #00b2a9; /* Verde Agua / Cian de Zapatería */
+}
+
+/* Botón de Acción */
+.banner-btn {
+  display: inline-block;
+  background-color: #00b2a9; /* Verde Agua */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 35px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.banner-btn:hover {
+  background-color: #008b84; /* Tono más oscuro al pasar el mouse */
+  transform: translateY(-2px);
+}
+
+/* Adaptación para Celulares (Responsivo) */
+@media (max-width: 768px) {
+  .banner-ofertas {
+    min-height: 350px;
+    background-position: 75% center; /* Ajusta el fondo para no tapar los pies */
+  }
+  
+  .banner-container {
+    padding: 0 20px;
+  }
+  
+  .banner-title {
+    font-size: 1.8rem;
+  }
+  
+  .banner-btn {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+  </style>
+</section>
+
+<section class="seccion-productos">
+  
+  <!-- PARTE SUPERIOR: GRANDES DESCUENTOS (4 PRODUCTOS) -->
+  <div class="bloque-productos">
+    <div class="header-bloque">
+      <h2>GRANDES DESCUENTOS DE LA SEMANA</h2>
+      <p>Zapatillas seleccionadas con precios de liquidación total</p>
+    </div>
+    
+    <div class="grid-productos">
+      <!-- Tarjeta Producto 1 -->
+      <div class="card-producto">
+        <div class="badge-descuento">-40% DESC.</div>
+        <div class="imagen-placeholder">
+          <img src="img/irun.jpg" alt="N.A. Striker Urban">
+        </div>
+        <div class="info-producto">
+          <span class="marca">N.A.</span>
+          <h3 class="nombre">N.A. Striker Urban</h3>
+          <div class="precios">
+            <span class="precio-antes">S/. 250.00</span>
+            <span class="precio-ahora">S/. 149.00</span>
+          </div>
+          <!-- Busca la etiqueta del botón y reemplázala por esta estructura de enlace -->
+<a href="detalle.html" class="btn-comprar-enlace">Ver Detalles</a>
+
+        </div>
+      </div>
+      
+      <!-- Tarjeta Producto 2 -->
+      <div class="card-producto">
+        <div class="badge-descuento">-30% DESC.</div>
+        <div class="imagen-placeholder">
+          <img src="ruta-zapatilla-2.jpg" alt="Fashion Vogue Star">
+        </div>
+        <div class="info-producto">
+          <span class="marca">FASHION</span>
+          <h3 class="nombre">Fashion Vogue Star</h3>
+          <div class="precios">
+            <span class="precio-antes">S/. 199.00</span>
+            <span class="precio-ahora">S/. 139.00</span>
+          </div>
+          <button class="btn-comprar">Ver Detalles</button>
+        </div>
+      </div>
+
+      <!-- Tarjeta Producto 3 -->
+      <div class="card-producto">
+        <div class="badge-descuento">-25% DESC.</div>
+        <div class="imagen-placeholder">
+          <img src="ruta-zapatilla-3.jpg" alt="Punto Runner Speed">
+        </div>
+        <div class="info-producto">
+          <span class="marca">PUNTO</span>
+          <h3 class="nombre">Punto Runner Speed</h3>
+          <div class="precios">
+            <span class="precio-antes">S/. 210.00</span>
+            <span class="precio-ahora">S/. 157.00</span>
+          </div>
+          <button class="btn-comprar">Ver Detalles</button>
+        </div>
+      </div>
+
+      <!-- Tarjeta Producto 4 -->
+      <div class="card-producto">
+        <div class="badge-descuento">-35% DESC.</div>
+        <div class="imagen-placeholder">
+          <img src="ruta-zapatilla-4.jpg" alt="DDarijems Ultra Cushion">
+        </div>
+        <div class="info-producto">
+          <span class="marca">DDARIIEMS</span>
+          <h3 class="nombre">DDarijems Ultra Cushion</h3>
+          <div class="precios">
+            <span class="precio-antes">S/. 180.00</span>
+            <span class="precio-ahora">S/. 117.00</span>
+          </div>
+          <button class="btn-comprar">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divisor-seccion">
+
+  <!-- PARTE INFERIOR: ÚLTIMO QUE LLEGÓ (4 PRODUCTOS) -->
+  <div class="bloque-productos">
+    <div class="header-bloque">
+      <h2>LO ÚLTIMO QUE LLEGÓ</h2>
+      <p>Descubre los modelos más recientes nacionales e importados</p>
+    </div>
+    
+    <div class="grid-productos">
+      <!-- Tarjeta Novedad 1 -->
+      <div class="card-producto">
+        <div class="badge-nuevo">NUEVO</div>
+        <div class="imagen-placeholder">
+          <img src="ruta-novedad-1.jpg" alt="Zapatilla Nueva 1">
+        </div>
+        <div class="info-producto">
+          <span class="marca">IMPORTADO</span>
+          <h3 class="nombre">Urban Style Max</h3>
+          <div class="precios">
+            <span class="precio-ahora">S/. 189.00</span>
+          </div>
+          <button class="btn-comprar">Ver Detalles</button>
+        </div>
+      </div>
+
+      <!-- Tarjeta Novedad 2 -->
+      <div class="card-producto">
+        <div class="badge-nuevo">NUEVO</div>
+        <div class="imagen-placeholder">
+          <img src="ruta-novedad-2.jpg" alt="Zapatilla Nueva 2">
+        </div>
+        <div class="info-producto">
+          <span class="marca">NACIONAL</span>
+          <h3 class="nombre">Runner Pro X</h3>
+          <div class="precios">
+            <span class="precio-ahora">S/. 165.00</span>
+          </div>
+          <button class="btn-comprar">Ver Detalles</button>
+        </div>
+      </div>
+
+      <!-- Tarjeta Novedad 3 -->
+      <div class="card-producto">
+        <div class="badge-nuevo">NUEVO</div>
+        <div class="imagen-placeholder">
+          <img src="ruta-novedad-3.jpg" alt="Zapatilla Nueva 3">
+        </div>
+        <div class="info-producto">
+          <span class="marca">IMPORTADO</span>
+          <h3 class="nombre">Classic Retro Air</h3>
+          <div class="precios">
+            <span class="precio-ahora">S/. 195.00</span>
+          </div>
+          <button class="btn-comprar">Ver Detalles</button>
+        </div>
+      </div>
+
+      <!-- Tarjeta Novedad 4 -->
+      <div class="card-producto">
+        <div class="badge-nuevo">NUEVO</div>
+        <div class="imagen-placeholder">
+          <img src="ruta-novedad-4.jpg" alt="Zapatilla Nueva 4">
+        </div>
+        <div class="info-producto">
+          <span class="marca">NACIONAL</span>
+          <h3 class="nombre">Sport Flex Confort</h3>
+          <div class="precios">
+            <span class="precio-ahora">S/. 140.00</span>
+          </div>
+          <button class="btn-comprar">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Contenedor Principal */
+.seccion-productos {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Encabezados */
+.header-bloque {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-bloque h2 {
+  color: #0c2340; /* Azul Marino */
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 0 0 8px 0;
+}
+
+.header-bloque p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Línea divisoria central */
+.divisor-seccion {
+  border: 0;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 50px 0;
+}
+
+/* Grid de Productos - Forzado a 4 Columnas en escritorio */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Tarjeta de Producto */
+.card-producto {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f0f0f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiquetas (Badges) */
+.badge-descuento {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #00b2a9; /* Verde Agua */
+  color: #ffffff;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.badge-nuevo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #0c2340; /* Azul Marino */
+  color: #ffffff;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+/* Contenedor de Imagen */
+.imagen-placeholder {
+  width: 100%;
+  height: 240px; /* Aumentado de 200px a 240px para darle más altura */
+  background-color: #ffffff; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Evita que la imagen se salga al crecer */
+  padding: 10px 0;  /* Reduce el espacio vertical */
+}
+
+/* 2. Forzamos a la zapatilla a ocupar casi todo el ancho disponible */
+.imagen-placeholder img {
+  max-width: 95%; /* Aumentado de 85% a 95% para que se vea más grande */
+  max-height: 90%; /* Aumentado de 80% a 90% */
+  object-fit: contain;
+  transition: transform 0.3s ease; /* Suaviza el efecto de acercamiento */
+}
+
+/* 3. EFECTO EXTRA: Al pasar el mouse por la tarjeta, la zapatilla se acerca ligeramente */
+.card-producto:hover .imagen-placeholder img {
+  transform: scale(1.08); /* Hace un leve zoom dinámico muy profesional */
+}
+
+
+/* Detalles del Producto */
+.info-producto {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.info-producto .marca {
+  color: #999;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.info-producto .nombre {
+  color: #333;
+  font-size: 0.95rem;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  min-height: 38px; /* Controla la alineación */
+}
+
+/* Zona de Precios */
+.precios {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.precio-antes {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 0.8rem;
+}
+
+.precio-ahora {
+  color: #00b2a9; /* Verde Agua */
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Corrección para que el enlace se comporte y luzca como un botón premium */
+.btn-comprar-enlace {
+  display: block;
+  text-align: center;
+  background-color: #0c2340; /* Fondo Azul Marino de Alondra */
+  color: #ffffff !important;  /* Texto blanco obligatorio */
+  text-decoration: none !important; /* Quita la línea subrayada de abajo */
+  padding: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: auto;
+  box-sizing: border-box; /* Evita que se deforme el ancho */
+  transition: background-color 0.2s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.btn-comprar-enlace:hover {
+  background-color: #00b2a9; /* Cambia al Verde Agua de Zapatería */
+  color: #ffffff !important;
+}
+
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+    gap: 15px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 576px) {
+  .grid-productos {
+    grid-template-columns: repeat(1, 1fr); /* 1 producto por fila */
+  }
+}
+
+  </style>
+</section>
+
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Columna 1: Sobre la tienda -->
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo"
+            >ALONDRA<span>Zapatería</span></a
+          >
+          <p class="footer-description">
+            Tu tienda de confianza con el catálogo más grande de zapatillas
+            nacionales e importadas. Calidad, variedad y los mejores precios del
+            mercado.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Categorías Rápidas -->
+        <div class="footer-col">
+          <h3>Categorías</h3>
+          <ul class="footer-links">
+            <li><a href="varon.html">Zapatillas Varón</a></li>
+            <li><a href="mujer.html">Zapatillas Mujer</a></li>
+            <li><a href="nino.html">Zapatillas Niño</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soporte y Ayuda -->
+        <div class="footer-col">
+          <h3>Soporte</h3>
+          <ul class="footer-links">
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="tiendas.html">Nuestras Tiendas</a></li>
+            <li><a href="#">Políticas de Cambio</a></li>
+            <li><a href="emprendedores.html">Zona Emprendedores</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Métodos de Pago y Seguridad -->
+        <div class="footer-col">
+          <h3>Pagos Seguros</h3>
+          <p class="footer-text">
+            Aceptamos todas las tarjetas de crédito, débito y transferencias
+            bancarias nacionales.
+          </p>
+          <div class="payment-methods">
+            <i class="fab fa-cc-visa" title="Visa"></i>
+            <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+            <i class="fab fa-cc-amex" title="American Express"></i>
+            <i
+              class="fas fa-money-bill-wave"
+              title="Efectivo/Transferencia"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior de Derechos Reservados -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 ALONDRA ZAPATERÍA. Todos los derechos reservados.</p>
+          <p>Diseñado para potenciar tu negocio.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- INTERACCIÓN MENÚ -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("mobile-menu");
+        const navMenu = document.getElementById("nav-menu");
+        if (menuToggle && navMenu) {
+          menuToggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            navMenu.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

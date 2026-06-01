@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Cambia el título según la página: Categoría Varón / Mujer / Niño -->
+    <title>Tienda de Zapatillas | Categoría Varón</title>
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/paginas.css" />
+    <link rel="stylesheet" href="CSS/home.css" />
+    <!-- Archivo de estilos para las subpáginas -->
+  </head>
+  <body>
+    <!-- MENÚ DE NAVEGACIÓN (NAVBAR) -->
+    <header class="navbar-header">
+      <div class="navbar-container">
+        <a href="index.html" class="logo">ALONDRA<span>Zapatería</span></a>
+
+        <!-- BOTÓN MENÚ MÓVIL -->
+        <button
+          class="menu-toggle"
+          id="mobile-menu"
+          aria-label="Abrir menú"
+          style="font-size: 30px; cursor: pointer"
+        >
+          ☰
+        </button>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="mujer.html" class="nav-link">Mujer</a>
+          <a href="varon.html" class="nav-link">Varón</a>
+          <a href="niño.html" class="nav-link">Niño</a>
+          <a href="promociones.html" class="nav-link promo">Promociones</a>
+          <a href="tiendas.html" class="nav-link">Nuestras Tiendas</a>
+          <a href="emprendedores.html" class="nav-link emprendedor"
+            >Zona Emprendedores</a
+          >
+        </nav>
+      </div>
+    </header>
+    <!-- BANNER DE DAMAS OPTIMIZADO Y CENTRADO -->
+    <div
+      class="category-banner-container"
+      style="
+        width: 100%;
+        max-width: 75%;
+        margin: 0 auto;
+        overflow: hidden;
+        line-height: 0;
+        padding: 20px 0;
+      "
+    >
+      <img
+        src="img/baner_dama.png"
+        alt="Elegancia en cada paso - Colección Mujer"
+        style="
+          width: 100%;
+          height: auto;
+          display: block;
+          object-fit: contain;
+          border-radius: 8px;
+        "
+      />
+    </div>
+
+    <!-- SECCIÓN MUESTRA DE TODAS LAS MARCAS -->
+    <section class="brands-section">
+      <div class="page-container">
+        <div class="section-title-box">
+          <h2>Nuestras Marcas Disponibles</h2>
+          <p>
+            Explora los mejores modelos de tus marcas favoritas nacionales e
+            importadas
+          </p>
+        </div>
+
+        <!-- Botones/Tarjetas de las marcas solicitadas para Damas -->
+        <div class="brands-grid" id="brands-filter-box">
+          <a href="#" class="brand-item active" data-filter="all">Todas</a>
+          <a href="#" class="brand-item" data-filter="i-run">I-Run</a>
+          <a href="#" class="brand-item" data-filter="n.a">N.A.</a>
+          <a href="#" class="brand-item" data-filter="punto">Punto</a>
+          <a href="#" class="brand-item" data-filter="ddarriems">DDarriems</a>
+          <a href="#" class="brand-item" data-filter="bepure">Bepure</a>
+          <a href="#" class="brand-item" data-filter="forward">Forward</a>
+          <a href="#" class="brand-item" data-filter="jnj">JNJ</a>
+          <a href="#" class="brand-item" data-filter="jutu-koreans"
+            >Jutu Koreans</a
+          >
+          <a href="#" class="brand-item" data-filter="walking">Walking</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CONTENEDORA DE PRODUCTOS (CON FILTRO INTERACTIVO) -->
+    <section class="catalog-section">
+      <div class="page-container">
+        <!-- Reutilizamos la grilla de productos de la Home -->
+        <div class="products-grid" id="catalog-products">
+          <!-- Modelo 1: Punto -->
+          <div class="product-card" data-brand="punto">
+            <span class="badge new">Nacional</span>
+            <div class="product-img">
+              <img src="https://unsplash.com" alt="Zapatilla Punto" />
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Punto</span>
+              <h3 class="product-title">Punto Urban Street</h3>
+              <div class="product-price-box">
+                <span class="current-price">S/. 149.00</span>
+              </div>
+              <a href="#" class="btn-add-cart"
+                ><i class="fas fa-shopping-cart"></i> Ver detalles</a
+              >
+            </div>
+          </div>
+          <!-- Modelo 2: Irun -->
+          <div class="product-card" data-brand="irun">
+            <span class="badge sale">Importado</span>
+            <div class="product-img">
+              <img src="https://unsplash.com" alt="Zapatilla Irun" />
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Irun</span>
+              <h3 class="product-title">Irun Alpha Running</h3>
+              <div class="product-price-box">
+                <span class="current-price">S/. 189.00</span>
+              </div>
+              <a href="#" class="btn-add-cart"
+                ><i class="fas fa-shopping-cart"></i> Ver detalles</a
+              >
+            </div>
+          </div>
+          <!-- Modelo 3: Forward -->
+          <div class="product-card" data-brand="forward">
+            <span class="badge new">Novedad</span>
+            <div class="product-img">
+              <img src="https://unsplash.com" alt="Zapatilla Forward" />
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Forward</span>
+              <h3 class="product-title">Forward Titan Fit</h3>
+              <div class="product-price-box">
+                <span class="current-price">S/. 215.00</span>
+              </div>
+              <a href="#" class="btn-add-cart"
+                ><i class="fas fa-shopping-cart"></i> Ver detalles</a
+              >
+            </div>
+          </div>
+          <!-- Modelo 4: Walking -->
+          <div class="product-card" data-brand="walking">
+            <span class="badge sale">Oferta</span>
+            <div class="product-img">
+              <img src="https://unsplash.com" alt="Zapatilla Walking" />
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Walking</span>
+              <h3 class="product-title">Walking Comfort Flex</h3>
+              <div class="product-price-box">
+                <span class="current-price">S/. 129.00</span>
+              </div>
+              <a href="#" class="btn-add-cart"
+                ><i class="fas fa-shopping-cart"></i> Ver detalles</a
+              >
+            </div>
+          </div>
+          <!-- Mensaje de Alerta si no hay productos (Oculto por defecto) -->
+          <div
+            id="no-products-message"
+            style="
+              display: none;
+              grid-column: 1/-1;
+              text-align: center;
+              padding: 40px;
+              color: var(--text-color);
+            "
+          >
+            <i
+              class="fas fa-box-open"
+              style="font-size: 40px; margin-bottom: 10px; color: #ccc"
+            ></i>
+            <p>
+              Por el momento no contamos con modelos disponibles de esta marca
+              para esta categoría.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECCIÓN DISCIPLINAS ADAPTADA A MUJER -->
+    <section class="disciplines-section">
+      <div class="page-container">
+        <div class="section-header">
+          <h2>Encuentra tu calzado por actividad</h2>
+          <p>Diseños especializados para tu ritmo de vida diario</p>
+        </div>
+
+        <div class="disciplines-grid">
+          <!-- Cardio / Running -->
+          <a href="#" class="discipline-card">
+            <div
+              class="discipline-img"
+              style="background-image: url(&quot;https://unsplash.com&quot;)"
+            ></div>
+            <div class="discipline-content">
+              <h3>Running & Gym</h3>
+              <span>Ver Modelos <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- Moda casual / Streetwear -->
+          <a href="#" class="discipline-card">
+            <div
+              class="discipline-img"
+              style="background-image: url(&quot;https://unsplash.com&quot;)"
+            ></div>
+            <div class="discipline-content">
+              <h3>Urbano & Casual</h3>
+              <span>Ver Tendencias <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FONDO OSCURO CUANDO EL CARRITO ESTÁ ABIERTO -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- PANEL LATERAL DEL CARRITO -->
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h3>Mi Carrito 🛒</h3>
+        <button id="close-cart" class="close-cart">✕</button>
+      </div>
+
+      <div id="cart-items-container" class="cart-items-body">
+        <p class="empty-cart-msg">Tu carrito está vacío.</p>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total-box">
+          <span>Total:</span>
+          <span class="cart-total-price">S/. 0.00</span>
+        </div>
+        <button class="btn-checkout">Proceder a la Compra</button>
+      </div>
+    </div>
+    <!-- PIE DE PÁGINA (Idéntico) -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo"
+            >👟 RUN<span>STORE</span></a
+          >
+          <p class="footer-description">
+            Tu tienda de confianza con el catálogo más grande de zapatillas
+            nacionales e importadas.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Categorías</h3>
+          <ul class="footer-links">
+            <li><a href="varon.html">Zapatillas Varón</a></li>
+            <li><a href="mujer.html">Zapatillas Mujer</a></li>
+            <li><a href="nino.html">Zapatillas Niño</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Soporte</h3>
+          <ul class="footer-links">
+            <li><a href="tiendas.html">Nuestras Tiendas</a></li>
+            <li><a href="emprendedores.html">Zona Emprendedores</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 RUNSTORE. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- SCRIPT DEL MENÚ RESPONSIVO DIRECTO -->
+    <script src="JS/main.js"></script>
+  </body>
+</html>

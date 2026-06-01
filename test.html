@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Prueba WhatsApp</title>
+</head>
+<body>
+
+<button id="btn-whatsapp">
+  Proceder a la Compra
+</button>
+
+<script>
+
+const btnWhatsapp = document.getElementById("btn-whatsapp");
+
+btnWhatsapp.addEventListener("click", () => {
+
+    const numero = "51946458737";
+
+    const mensaje = "Hola%20desde%20mi%20web";
+
+    const url = `https://wa.me/${numero}?text=${mensaje}`;
+
+    window.open(url, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>

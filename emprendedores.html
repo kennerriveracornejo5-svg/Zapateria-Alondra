@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Zapatillas | Zona Emprendedores</title>
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/paginas.css" />
+  </head>
+  <body>
+    <!-- MENÚ DE NAVEGACIÓN (NAVBAR) -->
+    <header class="navbar-header">
+      <div class="navbar-container">
+        <a href="index.html" class="logo">ALONDRA<span>Zapatería</span></a>
+
+        <!-- BOTÓN MENÚ MÓVIL -->
+        <button
+          class="menu-toggle"
+          id="mobile-menu"
+          aria-label="Abrir menú"
+          style="font-size: 30px; cursor: pointer"
+        >
+          ☰
+        </button>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="mujer.html" class="nav-link">Mujer</a>
+          <a href="varon.html" class="nav-link">Varón</a>
+          <a href="niño.html" class="nav-link">Niño</a>
+          <a href="promociones.html" class="nav-link promo">Promociones</a>
+          <a href="tiendas.html" class="nav-link">Nuestras Tiendas</a>
+          <a href="emprendedores.html" class="nav-link emprendedor"
+            >Zona Emprendedores</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- BANNER CORPORATIVO DE EMPRENDEDORES -->
+<h1 style="font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 900; color: #FFFFFF; font-size: 42px; text-transform: uppercase; letter-spacing: 2px; text-align: center;">
+  ZONA EMPRENDEDORES
+</h1>
+<p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 400; color: #E2E7E9; font-size: 16px; text-align: center; max-width: 600px; margin: 0 auto; line-height: 1.5;">
+  ¡Inicia tu propio negocio de calzado! Accede a precios de importación y compras por mayor a partir de 3 pares.
+</p>
+
+
+    <!-- SECCIÓN DE REGISTRO Y FORMULARIO -->
+    <main
+      class="emprendedores-section page-container"
+      style="padding: 50px 20px"
+    >
+      <div class="section-title-box">
+        <h2>Formulario de Asociación Mayorista</h2>
+        <p>
+          Déjanos tus datos de contacto y un asesor se comunicará contigo para
+          enviarte los catálogos de precios
+        </p>
+      </div>
+
+      <div class="emprendedores-layout">
+        <!-- Bloque Izquierdo: Beneficios -->
+        <div class="emprendedores-info">
+          <h3>¿Por qué emprender con nosotros?</h3>
+          <ul class="beneficios-list">
+            <li>
+              <i class="fas fa-check-circle"></i> Catálogo masivo con más de 7
+              marcas disponibles.
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Descuentos de hasta el 40%
+              respecto a precio de tienda.
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Cambios de talla rápidos y
+              garantía de fábrica.
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Envíos rápidos y seguros.
+            </li>
+          </ul>
+
+          <!-- Enlace directo vinculado al número de la tienda -->
+          <a href="https://wa.me" target="_blank" class="btn-whatsapp-direct">
+            <i class="fab fa-whatsapp"></i> Chat Directo con Asesor
+          </a>
+        </div>
+
+        <!-- Bloque Derecho: Formulario de captura de datos -->
+        <div class="form-container">
+          <form action="#" method="POST" class="emprendedor-form">
+            <div class="form-group">
+              <label for="nombre">Nombre Completo</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Ej. Juan Pérez"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Número de Teléfono / WhatsApp</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Ej. 987654321"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="correo">Correo Electrónico</label>
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                placeholder="Ej. juan@correo.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Cuéntanos sobre tu proyecto</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                placeholder="¿En qué ciudad deseas vender? ¿Qué marcas te interesan?"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-form">
+              Enviar Solicitud
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Columna 1: Sobre la tienda -->
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo"
+            >ALONDRA<span>Zapatería</span></a
+          >
+          <p class="footer-description">
+            Tu tienda de confianza con el catálogo más grande de zapatillas
+            nacionales e importadas. Calidad, variedad y los mejores precios del
+            mercado.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Categorías Rápidas -->
+        <div class="footer-col">
+          <h3>Categorías</h3>
+          <ul class="footer-links">
+            <li><a href="varon.html">Zapatillas Varón</a></li>
+            <li><a href="mujer.html">Zapatillas Mujer</a></li>
+            <li><a href="nino.html">Zapatillas Niño</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soporte y Ayuda -->
+        <div class="footer-col">
+          <h3>Soporte</h3>
+          <ul class="footer-links">
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="tiendas.html">Nuestras Tiendas</a></li>
+            <li><a href="#">Políticas de Cambio</a></li>
+            <li><a href="emprendedores.html">Zona Emprendedores</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Métodos de Pago y Seguridad -->
+        <div class="footer-col">
+          <h3>Pagos Seguros</h3>
+          <p class="footer-text">
+            Aceptamos todas las tarjetas de crédito, débito y transferencias
+            bancarias nacionales.
+          </p>
+          <div class="payment-methods">
+            <i class="fab fa-cc-visa" title="Visa"></i>
+            <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+            <i class="fab fa-cc-amex" title="American Express"></i>
+            <i
+              class="fas fa-money-bill-wave"
+              title="Efectivo/Transferencia"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior de Derechos Reservados -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 ALONDRA ZAPATERÍA. Todos los derechos reservados.</p>
+          <p>Diseñado para potenciar tu negocio.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- INTERACCIÓN MENÚ -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("mobile-menu");
+        const navMenu = document.getElementById("nav-menu");
+        if (menuToggle && navMenu) {
+          menuToggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            navMenu.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

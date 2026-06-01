@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Zapatillas | Promociones Imperdibles</title>
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/paginas.css" />
+    <link rel="stylesheet" href="CSS/home.css" />
+  </head>
+  <body>
+    <!-- MENÚ DE NAVEGACIÓN (NAVBAR) -->
+    <header class="navbar-header">
+      <div class="navbar-container">
+        <a href="index.html" class="logo">ALONDRA<span>Zapatería</span></a>
+
+        <!-- BOTÓN MENÚ MÓVIL -->
+        <button
+          class="menu-toggle"
+          id="mobile-menu"
+          aria-label="Abrir menú"
+          style="font-size: 30px; cursor: pointer"
+        >
+          ☰
+        </button>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="mujer.html" class="nav-link">Mujer</a>
+          <a href="varon.html" class="nav-link">Varón</a>
+          <a href="niño.html" class="nav-link">Niño</a>
+          <a href="promociones.html" class="nav-link promo">Promociones</a>
+          <a href="tiendas.html" class="nav-link">Nuestras Tiendas</a>
+          <a href="emprendedores.html" class="nav-link emprendedor"
+            >Zona Emprendedores</a
+          >
+        </nav>
+      </div>
+    </header>
+
+<main class="contenedor-detalle">
+    <!-- BOTÓN PARA VOLVER A LA PÁGINA PRINCIPAL -->
+  <a href="promociones.html" class="btn-volver">
+    <svg xmlns="http://w3.org" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+    </svg>
+    Volver al catálogo
+  </a>
+  <!-- Columna Izquierda: Imagen del producto -->
+  <div class="galeria-producto">
+    <div class="foto-principal">
+      <img src="imagenes/zapatilla-negra.png" alt="N.A. Striker Urban">
+    </div>
+  </div>
+
+<!-- Columna Derecha: Información y Opciones (Agregamos la clase .product-card aquí) -->
+<div class="informacion-compra product-card">
+  <span class="categoria-tag">Nacionales e Importadas</span>
+  
+  <!-- Agregamos la clase .product-title -->
+  <h1 class="nombre-producto product-title">N.A. Striker Urban</h1>
+  
+  <div class="precios-detalle">
+    <span class="antes">S/. 250.00</span>
+    <!-- Agregamos la clase .current-price -->
+    <span class="actual current-price">S/. 149.00</span>
+    <span class="ahorro">Ahorras 40%</span>
+  </div>
+
+  <p class="descripcion-breve">
+    Zapatilla urbana de alta resistencia con suela amortiguadora. Ideal para el uso diario.
+  </p>
+
+  <!-- SECCIÓN DE TALLAS -->
+  <div class="seccion-tallas">
+    <h3>Selecciona tu Talla (PE):</h3>
+    <div class="grid-tallas">
+      <label class="opcion-talla"><input type="radio" name="talla" value="38"><span>38</span></label>
+      <label class="opcion-talla"><input type="radio" name="talla" value="39"><span>39</span></label>
+      <label class="opcion-talla"><input type="radio" name="talla" value="40" checked><span>40</span></label>
+      <label class="opcion-talla"><input type="radio" name="talla" value="41"><span>41</span></label>
+    </div>
+  </div>
+
+  <!-- BOTÓN DE COMPRA: Cambiamos la clase a .btn-add-cart -->
+  <button class="btn-agregar-carrito btn-add-cart">
+    <svg xmlns="http://w3.org" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px;">
+      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L1.01 1.323A.5.5 0 0 1 .6 1H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+    </svg>
+    Agregar al Carrito
+  </button>
+</div>
+
+  <style>
+    .contenedor-detalle {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Galería de imagen */
+.foto-principal {
+  background-color: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-principal img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Textos e Información */
+.categoria-tag {
+  color: #00b2a9; /* Verde Agua */
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nombre-producto {
+  color: #0c2340; /* Azul Marino */
+  font-size: 2.2rem;
+  margin: 10px 0 20px 0;
+}
+
+.precios-detalle {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.precios-detalle .antes {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 1.1rem;
+}
+
+.precios-detalle .actual {
+  color: #00b2a9; /* Verde Agua */
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.precios-detalle .ahorro {
+  background-color: #e6f7f6;
+  color: #00b2a9;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.descripcion-breve {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Diseño de los Botones de Tallas */
+.seccion-tallas h3 {
+  color: #0c2340;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.grid-tallas {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.opcion-talla input {
+  display: none; /* Oculta el círculo radio tradicional */
+}
+
+.opcion-talla span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 46px;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Efecto visual al seleccionar una talla */
+.opcion-talla input:checked + span {
+  border-color: #0c2340; /* Azul Marino Alondra */
+  background-color: #0c2340;
+  color: #ffffff;
+}
+
+.opcion-talla span:hover {
+  border-color: #00b2a9; /* Verde Agua al pasar cursor */
+}
+
+/* Botón de Acción Principal */
+.btn-pedido-whatsapp {
+  background-color: #00b2a9; /* Verde Agua */
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-pedido-whatsapp:hover {
+  background-color: #0c2340; /* Alterna al Azul Marino */
+}
+/* Posicionamiento del botón de retorno */
+.contenedor-detalle {
+  position: relative; /* Permite alinear el botón respecto a la sección */
+  padding-top: 60px;  /* Crea espacio superior para que no choque con la foto */
+}
+
+.btn-volver {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0c2340; /* Azul Marino Alondra */
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Animación y cambio de color al pasar el cursor */
+.btn-volver:hover {
+  color: #00b2a9; /* Cambia al Verde Agua de Zapatería */
+  transform: translateX(-4px); /* Se mueve levemente a la izquierda indicando el retorno */
+}
+
+.btn-volver svg {
+  transition: transform 0.2s ease;
+}
+/* Nuevo botón "Agregar al Carrito" en la página de detalles */
+.btn-agregar-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c2340; /* Azul Marino Alondra */
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Cambio de color al pasar el mouse (Combina con tu barra lateral) */
+.btn-agregar-carrito:hover {
+  background-color: #00b2a9; /* Verde Agua Zapatería */
+  transform: translateY(-2px);
+}
+
+.btn-agregar-carrito:active {
+  transform: translateY(0);
+}
+
+/* Ajuste para Celulares */
+@media (max-width: 768px) {
+  .contenedor-detalle {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+  </style>
+</main>
+    
+    <!-- FONDO OSCURO CUANDO EL CARRITO ESTÁ ABIERTO -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- PANEL LATERAL DEL CARRITO -->
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h3>Mi Carrito 🛒</h3>
+        <button id="close-cart" class="close-cart">✕</button>
+      </div>
+
+      <div id="cart-items-container" class="cart-items-body">
+        <p class="empty-cart-msg">Tu carrito está vacío.</p>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total-box">
+          <span>Total:</span>
+          <span class="cart-total-price">S/. 0.00</span>
+        </div>
+<button class="btn-checkout" id="btn-whatsapp">
+  Proceder a la Compra
+</button>
+      </div>
+    </div>
+   <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Columna 1: Sobre la tienda -->
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo"
+            >ALONDRA<span>Zapatería</span></a
+          >
+          <p class="footer-description">
+            Tu tienda de confianza con el catálogo más grande de zapatillas
+            nacionales e importadas. Calidad, variedad y los mejores precios del
+            mercado.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Categorías Rápidas -->
+        <div class="footer-col">
+          <h3>Categorías</h3>
+          <ul class="footer-links">
+            <li><a href="varon.html">Zapatillas Varón</a></li>
+            <li><a href="mujer.html">Zapatillas Mujer</a></li>
+            <li><a href="nino.html">Zapatillas Niño</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soporte y Ayuda -->
+        <div class="footer-col">
+          <h3>Soporte</h3>
+          <ul class="footer-links">
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="tiendas.html">Nuestras Tiendas</a></li>
+            <li><a href="#">Políticas de Cambio</a></li>
+            <li><a href="emprendedores.html">Zona Emprendedores</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Métodos de Pago y Seguridad -->
+        <div class="footer-col">
+          <h3>Pagos Seguros</h3>
+          <p class="footer-text">
+            Aceptamos todas las tarjetas de crédito, débito y transferencias
+            bancarias nacionales.
+          </p>
+          <div class="payment-methods">
+            <i class="fab fa-cc-visa" title="Visa"></i>
+            <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+            <i class="fab fa-cc-amex" title="American Express"></i>
+            <i
+              class="fas fa-money-bill-wave"
+              title="Efectivo/Transferencia"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior de Derechos Reservados -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 ALONDRA ZAPATERÍA. Todos los derechos reservados.</p>
+          <p>Diseñado para potenciar tu negocio.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- INTERACCIÓN MENÚ -->
+    <script src="JS/main.js">
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("mobile-menu");
+        const navMenu = document.getElementById("nav-menu");
+        if (menuToggle && navMenu) {
+          menuToggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            navMenu.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

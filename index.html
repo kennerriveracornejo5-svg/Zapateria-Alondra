@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Zapatillas | Inicio</title>
+    <!-- Iconos externos para carrito y menú hamburguesa -->
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="CSS/home.css" />
+  </head>
+  <body>
+    <!-- MENÚ DE NAVEGACIÓN (NAVBAR) -->
+    <header class="navbar-header">
+      <div class="navbar-container">
+        <a href="index.html" class="logo">ALONDRA<span>Zapatería</span></a>
+
+        <!-- BOTÓN MENÚ MÓVIL -->
+        <button
+          class="menu-toggle"
+          id="mobile-menu"
+          aria-label="Abrir menú"
+          style="font-size: 30px; cursor: pointer"
+        >
+          ☰
+        </button>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="mujer.html" class="nav-link">Mujer</a>
+          <a href="varon.html" class="nav-link">Varón</a>
+          <a href="niño.html" class="nav-link">Niño</a>
+          <a href="promociones.html" class="nav-link promo">Promociones</a>
+          <a href="tiendas.html" class="nav-link">Nuestras Tiendas</a>
+          <a href="emprendedores.html" class="nav-link emprendedor"
+            >Zona Emprendedores</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- BANNER PRINCIPAL (SLIDER) -->
+    <section class="hero-slider">
+      <div
+        class="slide active"
+        style="
+          background-image:
+            linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url(&quot;https://unsplash.com&quot;);
+        "
+      >
+        <div class="slide-content">
+          <h2>CALZADO EXCLUSIVO PARA TODA LA FAMILIA</h2>
+          <p>
+            Descubre las últimas tendencias en zapatillas urbanas, deportivas y
+            escolares con la mejor calidad.
+          </p>
+          <a href="promociones.html" class="btn-slider"
+            >Ver Catálogo Completo</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN NOVEDADES Y MEJORES PRECIOS -->
+    <section class="products-section">
+      <div class="section-container">
+        <!-- Encabezado de la sección -->
+        <div class="section-header">
+          <h2>Novedades y Mejores Precios</h2>
+          <p>
+            Descubre los últimos ingresos y las ofertas más destacadas de la
+            semana
+          </p>
+        </div>
+
+        <div class="products-grid" id="catalog-products">
+          <!-- Tarjeta 1: Urbanas -->
+          <div class="product-card" data-brand="urban">
+            <span class="badge new">Nuevo</span>
+            <div class="product-img">
+              <img
+                src="img/urbana-blanca.jpg"
+                alt="Zapatilla Urbana Alondra Confort"
+              />
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Colección Urbana</span>
+              <h3 class="product-title">Alondra Classic White</h3>
+              <div class="product-price-box">
+                <span class="current-price">S/. 129.00</span>
+              </div>
+              <a href="#" class="btn-add-cart">Agregar al Carrito</a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2: Deportivas -->
+          <div class="product-card" data-brand="sport">
+            <span class="badge sale">Oferta</span>
+            <div class="product-img">
+              <img
+                src="img/deportiva-running.jpg"
+                alt="Zapatilla Running Sport"
+              />
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Línea Deportiva</span>
+              <h3 class="product-title">Speed Max Running</h3>
+              <div class="product-price-box">
+                <span class="old-price">S/. 189.00</span>
+                <span class="current-price discount">S/. 149.00</span>
+              </div>
+              <a href="#" class="btn-add-cart">Agregar al Carrito</a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3: Urbanas -->
+          <div class="product-card" data-brand="urban">
+            <span class="badge new">Nuevo</span>
+            <div class="product-img">
+              <img
+                src="img/urbana-blanca.jpg"
+                alt="Zapatilla Urbana Alondra Confort"
+              />
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Colección Urbana</span>
+              <h3 class="product-title">Alondra Urban Premium</h3>
+              <div class="product-price-box">
+                <span class="current-price">S/. 129.00</span>
+              </div>
+              <a href="#" class="btn-add-cart">Agregar al Carrito</a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 4: Urbanas -->
+          <div class="product-card" data-brand="urban">
+            <span class="badge new">Nuevo</span>
+            <div class="product-img">
+              <img
+                src="img/urbana-blanca.jpg"
+                alt="Zapatilla Urbana Alondra Confort"
+              />
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Colección Urbana</span>
+              <h3 class="product-title">Alondra Street Style</h3>
+              <div class="product-price-box">
+                <span class="current-price">S/. 129.00</span>
+              </div>
+              <a href="#" class="btn-add-cart">Agregar al Carrito</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mensaje oculto por si el filtro de JS no encuentra productos -->
+        <div
+          id="no-products-message"
+          style="
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: var(--text-color);
+          "
+        >
+          No se encontraron modelos disponibles en esta categoría por el
+          momento.
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE CATEGORÍAS POR DISCIPLINA -->
+    <section class="disciplines-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2>Compra por Disciplina</h2>
+          <p>Encuentra el calzado perfecto diseñado para tu deporte favorito</p>
+        </div>
+
+        <div class="disciplines-grid">
+          <!-- Tarjeta de Futbol-->
+        <a href="#" class="discipline-card">
+            <div
+              class="discipline-img"
+              style="
+                background-image: url(&quot;./img/futbol_varon.png&quot;);
+                background-position: center 30%;
+              "
+            ></div>
+
+            <div class="discipline-content">
+              <h3>FÚTBOL</h3>
+              <span>Ver Colección</span>
+            </div>
+          </a>
+
+          <!-- Tarjeta 2: Running -->
+          <a href="#" class="discipline-card">
+            <div
+              class="discipline-img"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+                  url(&quot;./img/urbano_dama.png&quot;);
+              "
+            ></div>
+            <div class="discipline-content">
+              <h3>Urbana</h3>
+              <span>Ver Colección <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- Tarjeta 3: Training -->
+          <a href="#" class="discipline-card">
+            <div
+              class="discipline-img"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+                  url(&quot;https://unsplash.com&quot;);
+              "
+            ></div>
+            <div class="discipline-content">
+              <h3>Training</h3>
+              <span>Ver Colección <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- Tarjeta 4: Outdoor -->
+          <a href="#" class="discipline-card">
+            <div
+              class="discipline-img"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+                  url(&quot;https://unsplash.com&quot;);
+              "
+            ></div>
+            <div class="discipline-content">
+              <h3>Outdoor</h3>
+              <span>Ver Colección <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE BENEFICIOS -->
+    <section
+      class="benefits-section"
+      style="
+        background-color: var(--gray-color);
+        padding: 40px 20px;
+        text-align: center;
+      "
+    >
+      <div
+        class="section-container"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          gap: 20px;
+          max-width: 1200px;
+          margin: 0 auto;
+        "
+      >
+        <div class="benefit-item">
+          <div style="font-size: 30px; color: var(--primary-color)">📦</div>
+          <h4 style="margin: 10px 0 5px 0; font-weight: 700">
+            Envíos a Todo el Perú
+          </h4>
+          <p style="font-size: 14px; color: var(--text-color)">
+            Recibe tu calzado en la puerta de tu casa u oficina.
+          </p>
+        </div>
+        <div class="benefit-item">
+          <div style="font-size: 30px; color: var(--primary-color)">🔄</div>
+          <h4 style="margin: 10px 0 5px 0; font-weight: 700">
+            Cambio de Talla Garantizado
+          </h4>
+          <p style="font-size: 14px; color: var(--text-color)">
+            ¿No te quedó? Tienes hasta 7 días para gestionar tu cambio.
+          </p>
+        </div>
+        <div class="benefit-item">
+          <div style="font-size: 30px; color: var(--primary-color)">💳</div>
+          <h4 style="margin: 10px 0 5px 0; font-weight: 700">
+            Pago 100% Seguro
+          </h4>
+          <p style="font-size: 14px; color: var(--text-color)">
+            Aceptamos Yape, Plin, transferencias y todas las tarjetas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FONDO OSCURO CUANDO EL CARRITO ESTÁ ABIERTO -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- PANEL LATERAL DEL CARRITO -->
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h3>Mi Carrito 🛒</h3>
+        <button id="close-cart" class="close-cart">✕</button>
+      </div>
+
+      <div id="cart-items-container" class="cart-items-body">
+        <p class="empty-cart-msg">Tu carrito está vacío.</p>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total-box">
+          <span>Total:</span>
+          <span class="cart-total-price">S/. 0.00</span>
+        </div>
+        <button class="btn-checkout">Proceder a la Compra</button>
+      </div>
+    </div>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Columna 1: Sobre la tienda -->
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo"
+            >ALONDRA<span>Zapatería</span></a
+          >
+          <p class="footer-description">
+            Tu tienda de confianza con el catálogo más grande de zapatillas
+            nacionales e importadas. Calidad, variedad y los mejores precios del
+            mercado.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Categorías Rápidas -->
+        <div class="footer-col">
+          <h3>Categorías</h3>
+          <ul class="footer-links">
+            <li><a href="varon.html">Zapatillas Varón</a></li>
+            <li><a href="mujer.html">Zapatillas Mujer</a></li>
+            <li><a href="nino.html">Zapatillas Niño</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soporte y Ayuda -->
+        <div class="footer-col">
+          <h3>Soporte</h3>
+          <ul class="footer-links">
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="tiendas.html">Nuestras Tiendas</a></li>
+            <li><a href="#">Políticas de Cambio</a></li>
+            <li><a href="emprendedores.html">Zona Emprendedores</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Métodos de Pago y Seguridad -->
+        <div class="footer-col">
+          <h3>Pagos Seguros</h3>
+          <p class="footer-text">
+            Aceptamos todas las tarjetas de crédito, débito y transferencias
+            bancarias nacionales.
+          </p>
+          <div class="payment-methods">
+            <i class="fab fa-cc-visa" title="Visa"></i>
+            <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+            <i class="fab fa-cc-amex" title="American Express"></i>
+            <i
+              class="fas fa-money-bill-wave"
+              title="Efectivo/Transferencia"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior de Derechos Reservados -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 ALONDRA ZAPATERÍA. Todos los derechos reservados.</p>
+          <p>Diseñado para potenciar tu negocio.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- BOTÓN FLOTANTE DEL CARRITO -->
+    <button
+      id="floating-cart-btn"
+      class="floating-cart-btn"
+      aria-label="Ver carrito"
+    >
+      🛒
+      <span id="cart-count-badge" class="cart-badge">0</span>
+    </button>
+
+    <!-- CONTROLADORES JAVASCRIPT (Al final del body) -->
+    <script src="JS/main.js"></script>
+  </body>
+</html>
