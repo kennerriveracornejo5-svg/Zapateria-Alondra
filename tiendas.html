@@ -1,0 +1,1492 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Zapatillas | Nuestras Tiendas</title>
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="CSS/paginas.css" />
+  </head>
+  <body>
+    <!-- MENÚ DE NAVEGACIÓN (NAVBAR) -->
+    <header class="navbar-header">
+      <div class="navbar-container">
+        <a href="index.html" class="logo">ALONDRA<span>Zapatería</span></a>
+
+        <!-- BOTÓN MENÚ MÓVIL -->
+        <button
+          class="menu-toggle"
+          id="mobile-menu"
+          aria-label="Abrir menú"
+          style="font-size: 30px; cursor: pointer"
+        >
+          ☰
+        </button>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="mujer.html" class="nav-link">Mujer</a>
+          <a href="varon.html" class="nav-link">Varón</a>
+          <a href="niño.html" class="nav-link">Niño</a>
+          <a href="promociones.html" class="nav-link promo">Promociones</a>
+          <a href="tiendas.html" class="nav-link">Nuestras Tiendas</a>
+          <a href="emprendedores.html" class="nav-link emprendedor"
+            >Zona Emprendedores</a
+          >
+        </nav>
+      </div>
+    </header>
+    <!-- BANER DE NUESTRAS TIENDAS-->
+    <section class="category-banner">
+      <!-- Estilos dinámicos para corregir el tamaño en celulares -->
+      <style>
+        /* ================================================================= */
+        /* ESTILOS DEL BANNER PRINCIPAL (COMPUTADORA Y GENERAL)             */
+        /* ================================================================= */
+        .category-banner {
+          background-image:
+            linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url("img/nuestras_tiendas.png");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          min-height: 550px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 40px;
+          box-sizing: border-box;
+          width: 100%;
+        }
+
+        .banner-content {
+          text-align: center;
+          color: #ffffff;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        .banner-content h1 {
+          font-size: 2.8rem;
+          font-weight: 800;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+          font-family: sans-serif;
+          letter-spacing: 0.5px;
+          line-height: 1.2;
+        }
+
+        .banner-content p {
+          font-size: 1.2rem;
+          font-family: sans-serif;
+          margin: 0;
+          line-height: 1.5;
+          color: #f1f5f9;
+        }
+
+        /* ================================================================= */
+        /* CONFIGURACIÓN MÁGICA PARA MÓVILES (RESPONSIVE)                   */
+        /* ================================================================= */
+        @media (max-width: 768px) {
+          .category-banner {
+            min-height: 320px; /* Reduce la altura total en celular para no desplazar todo */
+            padding: 20px 15px; /* Reduce los márgenes laterales internos */
+            background-image:
+              linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+              /* Aclara el fondo para que la foto respire */
+                url("img/nuestras_tiendas.png");
+          }
+
+          .banner-content h1 {
+            font-size: 1.45rem !important; /* Letra más pequeña y estética para celular */
+            margin-bottom: 8px !important;
+            letter-spacing: 0.2px;
+          }
+
+          .banner-content p {
+            font-size: 0.88rem !important; /* Texto secundario más compacto */
+            line-height: 1.4;
+            padding: 0 10px; /* Evita que el texto toque los bordes de la pantalla */
+            color: #e2e8f0;
+          }
+        }
+      </style>
+
+      <div
+        class="banner-content"
+        style="
+          text-align: center;
+          color: #ffffff;
+          max-width: 700px;
+          margin: 0 auto;
+        "
+      >
+        <h1
+          class="banner-title"
+          style="
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-family: sans-serif;
+          "
+        >
+          Encuéntranos en la Galería Manuel Alonzo
+        </h1>
+        <p class="banner-text" style="font-family: sans-serif; margin: 0">
+          Visítanos en nuestros amplios stands de los pisos 3, 4 y 5. ¡Ven y
+          pruébate tus zapatillas favoritas!
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div
+      style="
+        text-align: center;
+        padding: 50px 20px;
+        font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+      "
+    >
+      <h2
+        style="
+          color: #0f2c59;
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 5px;
+          text-transform: uppercase;
+        "
+      >
+        Explora Nuestros Niveles
+      </h2>
+      <p style="color: #666; font-size: 1rem; margin-bottom: 35px">
+        Selecciona un piso para conocer la ubicación de nuestros stands y su
+        especialidad.
+      </p>
+
+      <!-- SISTEMA DE PESTAÑAS (TABS) -->
+      <div
+        class="tabs-container"
+        style="
+          max-width: 900px;
+          margin: 0 auto;
+          background: #ffffff;
+          border-radius: 12px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+          border: 1px solid #e2e8f0;
+        "
+      >
+        <!-- BOTONES DE SELECCIÓN CON ESTILOS DINÁMICOS -->
+        <div
+          style="
+            display: flex;
+            background: #ffffff;
+            border-bottom: 2px solid #0f2c59;
+          "
+        >
+          <button
+            onclick="switchFloor('piso3')"
+            id="btn-piso3"
+            class="tab-btn active-tab"
+          >
+            TERCER PISO
+          </button>
+          <button onclick="switchFloor('piso4')" id="btn-piso4" class="tab-btn">
+            CUARTO PISO
+          </button>
+          <button onclick="switchFloor('piso5')" id="btn-piso5" class="tab-btn">
+            QUINTO PISO
+          </button>
+        </div>
+
+        <!-- CONTENIDO PISO 3 (AUTO-CARRUSEL DE 2 IMÁGENES) -->
+        <div id="content-piso3" class="tab-content">
+          <div class="floor-grid">
+            <div class="floor-image carousel-wrapper">
+              <div class="carousel-track" id="carousel3">
+                <div class="carousel-slide active-slide">
+                  <img
+                    src="img/stand_piso3_44.png"
+                    alt="Alondra Zapatería - Stand 44"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                  <div class="carousel-caption">Stand 44</div>
+                </div>
+                <div class="carousel-slide">
+                  <img
+                    src="img/stand_piso3_56.png"
+                    alt="Alondra Zapatería - Stand 56"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                  <div class="carousel-caption">Stand 56</div>
+                </div>
+              </div>
+            </div>
+            <div class="floor-info">
+              <span class="badge" style="background: #e3fafc; color: #0b7285"
+                >✨ Modelos Exclusivos</span
+              >
+              <h3 style="color: #0f2c59; font-size: 1.6rem; margin: 10px 0">
+                Nuestros Stands en el 3er Piso
+              </h3>
+              <p style="color: #555; line-height: 1.6">
+                Ven a conocer nuestro espacio principal en el tercer nivel.
+                Visítanos y pruébate las últimas tendencias en zapatillas con
+                una atención totalmente personalizada.
+              </p>
+              <div
+                style="
+                  margin: 20px 0;
+                  border-top: 1px solid #eee;
+                  padding-top: 15px;
+                  text-align: left;
+                "
+              >
+                <p style="margin: 5px 0; color: #555">
+                  <strong>📍 Ubicación:</strong> Galería Manuel Alonzo - Piso 3
+                  (Stand 44 y Stand 56)
+                </p>
+                <p style="margin: 5px 0; color: #555">
+                  <strong>🕒 Horario:</strong> Lun a Sáb 9:30 AM - 9:00 PM | Dom
+                  10:00 AM - 8:00 PM
+                </p>
+              </div>
+              <a href="https://wa.me" target="_blank" class="wsp-btn"
+                >Contactar al Piso 3</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTENIDO PISO 4 (AUTO-CARRUSEL DE 4 IMÁGENES) -->
+        <div id="content-piso4" class="tab-content hidden-floor">
+          <div class="floor-grid">
+            <div class="floor-image carousel-wrapper">
+              <div class="carousel-track" id="carousel4">
+                <div class="carousel-slide active-slide">
+                  <img
+                    src="img/stand_piso4_26.png"
+                    alt="Alondra Zapatería - Stand 26"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                  <div class="carousel-caption">Stand 26</div>
+                </div>
+                <div class="carousel-slide">
+                  <img
+                    src="img/stand_piso4_24.png"
+                    alt="Alondra Zapatería - Stand 24"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                  <div class="carousel-caption">Stand 24</div>
+                </div>
+                <div class="carousel-slide">
+                  <img
+                    src="img/stand_piso4_20.png"
+                    alt="Alondra Zapatería - Stand 20"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                  <div class="carousel-caption">Stand 20</div>
+                </div>
+                <div class="carousel-slide">
+                  <img
+                    src="img/stand-32-33.jpeg"
+                    alt="Alondra Zapatería - Stand 32 y 33"
+                    style="
+                      width: 100%;
+                      height: auto;
+                      object-fit: contain;
+                      background-color: #fff;
+                    "
+                  />
+
+                  <div class="carousel-caption">Stand 32 - 33</div>
+                </div>
+              </div>
+            </div>
+            <div class="floor-info">
+              <span class="badge" style="background: #fff0f6; color: #c2255c"
+                >👟 Variedad de Calzado</span
+              >
+              <h3 style="color: #0f2c59; font-size: 1.6rem; margin: 10px 0">
+                Nuestros Stands en el 4to Piso
+              </h3>
+              <p style="color: #555; line-height: 1.6">
+                Encuentra el stock más completo y una gran variedad de tallas en
+                nuestro nivel del cuarto piso, diseñado para ofrecerte
+                exactamente el par que estás buscando.
+              </p>
+              <div
+                style="
+                  margin: 20px 0;
+                  border-top: 1px solid #eee;
+                  padding-top: 15px;
+                  text-align: left;
+                "
+              >
+                <p style="margin: 5px 0; color: #555">
+                  <strong>📍 Ubicación:</strong> Galería Manuel Alonzo - Piso 4
+                  (Stands 20, 24, 26 y el gran Stand unificado 32-33)
+                </p>
+                <p style="margin: 5px 0; color: #555">
+                  <strong>🕒 Horario:</strong> Lun a Sáb 9:30 AM - 9:00 PM | Dom
+                  10:00 AM - 8:00 PM
+                </p>
+              </div>
+              <a href="https://wa.me" target="_blank" class="wsp-btn"
+                >Contactar al Piso 4</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTENIDO QUINTO PISO  -->
+        <div id="content-piso5" class="tab-content hidden-floor">
+          <div class="floor-grid">
+            <div class="floor-image">
+              <img
+                src="img/stand_piso5_24.png"
+                alt="Alondra Zapatería - Stand 24"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div class="floor-info">
+              <span class="badge" style="background: #ebfbee; color: #2b8a3e"
+                >🏢 Stock Completo y Venta</span
+              >
+              <h3 style="color: #0f2c59; font-size: 1.6rem; margin: 10px 0">
+                Nuestro Stand en el 5to Piso
+              </h3>
+              <p style="color: #555; line-height: 1.6">
+                Visita nuestro Stand 24, donde encontrarás un catálogo completo
+                de zapatillas listas para llevar, con la mejor atención y los
+                mismos precios competitivos de la marca.
+              </p>
+              <div
+                style="
+                  margin: 20px 0;
+                  border-top: 1px solid #eee;
+                  padding-top: 15px;
+                  text-align: left;
+                "
+              >
+                <p style="margin: 5px 0; color: #555">
+                  <strong>📍 Ubicación:</strong> Galería Manuel Alonzo - Piso 5
+                  (Stand 24)
+                </p>
+                <p style="margin: 5px 0; color: #555">
+                  <strong>🕒 Horario:</strong> Lun a Sáb 9:30 AM - 9:00 PM | Dom
+                  10:00 AM - 8:00 PM
+                </p>
+              </div>
+              <a href="https://wa.me" target="_blank" class="wsp-btn"
+                >Contactar al Piso 5</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ESTILOS CSS EVOLUCIONADOS -->
+    <style>
+      .tab-btn {
+        flex: 1;
+        padding: 18px 10px;
+        border: none;
+        background: #ffffff;
+        color: #556b8d;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        outline: none;
+      }
+      .tab-btn:hover {
+        background: #f1f5f9;
+        color: #0f2c59;
+      }
+      .active-tab {
+        background: #0f2c59 !important;
+        color: #ffffff !important;
+      }
+
+      /* NUEVA LÓGICA DE VISIBILIDAD DE PESTAÑAS SEGUROS */
+      .tab-content {
+        padding: 30px;
+        display: block; /* Siempre activo en bloque para que corra el carrusel */
+        visibility: visible;
+        height: auto;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+      }
+      .hidden-floor {
+        display: none !important; /* Mantiene limpio el espacio principal */
+      }
+
+      .floor-grid {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        text-align: left;
+      }
+      .floor-image {
+        flex: 1;
+        height: 300px;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #eee;
+      }
+      .floor-info {
+        flex: 1.2;
+      }
+      .badge {
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        display: inline-block;
+      }
+      .wsp-btn {
+        display: inline-block;
+        background: #25d366;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .wsp-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      /* ESTILOS DEL SLIDER */
+      .carousel-wrapper {
+        position: relative;
+        width: 100%;
+        height: 300px;
+      }
+      .carousel-track {
+        width: 100%;
+        height: 100%;
+      }
+      .carousel-slide {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      .active-slide {
+        display: block;
+        animation: fadeEffect 0.8s ease-in-out;
+      }
+      .carousel-caption {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background: rgba(15, 44, 89, 0.85);
+        color: #fff;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: bold;
+      }
+
+      @keyframes fadeEffect {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .floor-grid {
+          flex-direction: column;
+        }
+        .floor-image,
+        .carousel-wrapper {
+          width: 100%;
+          height: 220px;
+        }
+        .tab-btn {
+          font-size: 0.8rem;
+          padding: 14px 5px;
+        }
+        .tab-content {
+          padding: 20px 15px;
+        }
+      }
+    </style>
+
+    <!-- LÓGICA DE ANIMACIÓN MEJORADA -->
+    <script>
+      // Cambiar entre pestañas agregando/quitando la clase oculta
+      function switchFloor(floorId) {
+        document.getElementById("content-piso3").classList.add("hidden-floor");
+        document.getElementById("content-piso4").classList.add("hidden-floor");
+        document.getElementById("content-piso5").classList.add("hidden-floor");
+
+        document.getElementById("btn-piso3").classList.remove("active-tab");
+        document.getElementById("btn-piso4").classList.remove("active-tab");
+        document.getElementById("btn-piso5").classList.remove("active-tab");
+
+        document
+          .getElementById("content-" + floorId)
+          .classList.remove("hidden-floor");
+        document.getElementById("btn-" + floorId).classList.add("active-tab");
+      }
+      // ==========================================
+      // CARRUSEL AUTOMÁTICO - PISO 3 (2 IMÁGENES)
+      // ==========================================
+      let indexP3 = 0;
+
+      setInterval(function () {
+        const container = document.getElementById("carousel3");
+        if (!container) return;
+
+        const slides = container.getElementsByClassName("carousel-slide");
+        if (slides.length > 0) {
+          // Quita la clase activa a la foto actual
+          slides[indexP3].classList.remove("active-slide");
+
+          // Calcula el índice de la siguiente foto
+          indexP3 = (indexP3 + 1) % slides.length;
+
+          // Muestra la nueva foto con el efecto suave
+          slides[indexP3].classList.add("active-slide");
+        }
+      }, 4000); // Cambio automático cada 4 segundos
+
+      // ==========================================
+      // CARRUSEL AUTOMÁTICO - PISO 4 (4 IMÁGENES)
+      // ==========================================
+      let indexP4 = 0;
+
+      setInterval(function () {
+        const container = document.getElementById("carousel4");
+        if (!container) return;
+
+        const slides = container.getElementsByClassName("carousel-slide");
+        if (slides.length > 0) {
+          // Quita la clase activa a la foto actual
+          slides[indexP4].classList.remove("active-slide");
+
+          // Calcula el índice de la siguiente foto
+          indexP4 = (indexP4 + 1) % slides.length;
+
+          // Muestra la nueva foto con el efecto suave
+          slides[indexP4].classList.add("active-slide");
+        }
+      }, 4000); // Cambio automático cada 4 segundos
+    </script>
+    <!-- ================================================================= -->
+    <!-- PARTE 1: HTML DE POLÍTICAS DE CAMBIOS, DEVOLUCIONES Y GARANTÍA     -->
+    <!-- ================================================================= -->
+    <div class="politicas-seccion">
+      <h2 class="politicas-titulo">Políticas de Cambios y Devoluciones</h2>
+      <p class="politicas-subtitulo">
+        Conoce nuestros términos y requisitos para brindarte el mejor respaldo
+        en cada compra.
+      </p>
+
+      <!-- ACORDEÓN INTERACTIVO -->
+      <div class="acordeon-contenedor">
+        <!-- BLOQUE 1: CAMBIOS -->
+        <div class="acordeon-item">
+          <button class="acordeon-trigger" onclick="toggleFaq(this)">
+            <span>🔄 REQUISITOS PARA CAMBIOS</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-content">
+            <p>
+              Antes de proceder a solicitar algún cambio, debes tener presente
+              los siguientes requisitos indispensables:
+            </p>
+            <ol>
+              <li>
+                <strong>Plazos máximos:</strong> Estar dentro de los 7 días
+                calendario desde la fecha de compra en tienda, o dentro de los
+                15 días calendario desde la entrega para compras online.
+              </li>
+              <li>
+                <strong>Estado del producto:</strong> No debe mostrar ningún
+                tipo de señal de uso, debe contar con los accesorios y/o
+                empaques originales completos.
+              </li>
+              <li>
+                <strong>Comprobante:</strong> Contar con el comprobante original
+                de compra (no aplica para compras realizadas de forma online).
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- BLOQUE 2: DEVOLUCIONES -->
+        <div class="acordeon-item">
+          <button class="acordeon-trigger" onclick="toggleFaq(this)">
+            <span>💵 REQUISITOS PARA DEVOLUCIONES</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-content">
+            <p>
+              Antes de proceder a solicitar una devolución de dinero, debes
+              cumplir con las siguientes condiciones básicas:
+            </p>
+            <ol>
+              <li>
+                <strong>Plazos máximos:</strong> Estar dentro de los 7 días
+                calendario desde la fecha de compra en tienda, o dentro de los 7
+                días calendario desde la entrega para canales online.
+              </li>
+              <li>
+                <strong>Estado del producto:</strong> El calzado no debe mostrar
+                señales de uso y tiene que ser entregado estrictamente en su
+                caja y empaques originales.
+              </li>
+              <li>
+                <strong>Comprobante:</strong> Contar con el comprobante original
+                de compra física (no es obligatorio presentar comprobante físico
+                para compras online).
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- BLOQUE 3: GARANTÍA -->
+        <div class="acordeon-item no-border">
+          <button class="acordeon-trigger" onclick="toggleFaq(this)">
+            <span>🛡️ POLÍTICA DE GARANTÍA</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-content">
+            <p><strong>Requisitos fundamentales:</strong></p>
+            <ol>
+              <li>
+                Estar dentro de los 30 días calendario contados desde la fecha
+                original de compra.
+              </li>
+              <li>
+                Contar con el comprobante original de compra (requisito
+                exceptuado para pedidos vía online).
+              </li>
+            </ol>
+
+            <p style="margin-top: 15px">
+              <strong>Observaciones importantes:</strong>
+            </p>
+            <ul class="lista-observaciones">
+              <li>
+                La garantía no cubre daños por mal uso (limpieza inadecuada,
+                raspones, marcas de uso cotidianas o manipulación de terceros).
+              </li>
+              <li>
+                De ser necesario, el calzado pasará por un control interno de
+                calidad cuyo plazo de respuesta será de hasta 10 días hábiles.
+              </li>
+              <li>
+                Queda a discreción de Alondra Zapatería ofrecer el cambio del
+                producto por nota de crédito o el servicio de reparación sin
+                costo alguno.
+              </li>
+            </ul>
+
+            <!-- ENLACE DE INVITACIÓN DIRECTA AL FORMULARIO -->
+            <div class="enlace-formulario-contenedor">
+              <p>
+                Para cualquier solicitud de cambio o devolución, haz clic en el
+                siguiente enlace para registrar tus datos:
+              </p>
+              <button onclick="irAlFormulario()" class="btn-ir-formulario">
+                📝 Rellenar el siguiente formulario digital
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      /* ================================================================= */
+      /* PARTE 2: ESTILOS CSS PARA LA SECCIÓN DE POLÍTICAS DE ACORDEÓN     */
+      /* ================================================================= */
+
+      /* Contenedor principal de la sección */
+      .politicas-seccion {
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 0 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      /* Títulos principales */
+      .politicas-titulo {
+        color: #0f2c59;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+      }
+
+      .politicas-subtitulo {
+        color: #666;
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 35px;
+      }
+
+      /* Caja contenedora del acordeón */
+      .acordeon-contenedor {
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        background: #ffffff;
+      }
+
+      /* Items individuales del acordeón */
+      .acordeon-item {
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .acordeon-item.no-border {
+        border-bottom: none;
+      }
+
+      /* Botón disparador (Encabezado) */
+      .acordeon-trigger {
+        width: 100%;
+        background: #ffffff;
+        border: none;
+        padding: 22px 25px;
+        text-align: left;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #0f2c59;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.2s ease;
+        outline: none;
+      }
+
+      .acordeon-trigger:hover {
+        background: #f8fafc;
+      }
+
+      /* Estado activo del botón cuando se abre */
+      .acordeon-trigger.active-trigger {
+        background: #0f2c59;
+        color: #ffffff;
+      }
+
+      /* Icono del signo más (+) */
+      .acordeon-icon {
+        font-size: 1.4rem;
+        font-weight: 300;
+        transition: transform 0.3s ease;
+      }
+
+      /* Convierte el signo + en una X al abrirse */
+      .acordeon-trigger.active-trigger .acordeon-icon {
+        transform: rotate(45deg);
+      }
+
+      /* Contenido oculto que se despliega animado */
+      .acordeon-content {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 25px;
+        background: #ffffff;
+        transition:
+          max-height 0.3s ease-out,
+          padding 0.3s ease-out;
+        color: #4a5568;
+        font-size: 0.98rem;
+        line-height: 1.6;
+      }
+
+      /* Listas internas de requisitos */
+      .acordeon-content ol,
+      .lista-observaciones {
+        margin: 10px 0 15px 20px;
+        padding: 0;
+      }
+
+      .acordeon-content ol li,
+      .lista-observaciones li {
+        margin-bottom: 8px;
+      }
+
+      .lista-observaciones {
+        list-style-type: disc;
+      }
+
+      /* Contenedor del enlace de invitación al formulario */
+      .enlace-formulario-contenedor {
+        margin-top: 25px;
+        background-color: #f1f5f9;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+      }
+
+      .enlace-formulario-contenedor p {
+        margin: 0 0 12px 0;
+        font-weight: 600;
+        color: #334155;
+      }
+
+      /* Botón interactivo para ir al formulario */
+      .btn-ir-formulario {
+        background: #c2255c;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .btn-ir-formulario:hover {
+        background: #9e1c4b;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(194, 37, 92, 0.25);
+      }
+
+      /* Adaptabilidad para teléfonos celulares */
+      @media (max-width: 768px) {
+        .acordeon-trigger {
+          font-size: 0.95rem;
+          padding: 18px 20px;
+        }
+        .acordeon-content {
+          padding: 0 20px;
+          font-size: 0.9rem;
+        }
+        .politicas-titulo {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+    <script>
+      // ================================================================= -->
+      // PARTE 3: SCRIPT JAVASCRIPT PARA EL ACORDEÓN Y DESPLAZAMIENTO FLUIDO
+      // ================================================================= -->
+
+      /**
+       * Controla la apertura y el cierre interactivo de las pestañas del acordeón
+       */
+      function toggleFaq(button) {
+        // Alterna la clase de color y rotación del icono en el botón
+        button.classList.toggle("active-trigger");
+
+        // Selecciona el contenedor de texto inmediatamente posterior
+        const content = button.nextElementSibling;
+
+        // Verifica si el panel ya se encuentra desplegado
+        if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+          // Si está abierto, lo contrae limpiamente
+          content.style.maxHeight = "0px";
+          content.style.paddingTop = "0px";
+          content.style.paddingBottom = "0px";
+        } else {
+          // Si está cerrado, calcula el espacio interno real y lo expande suavemente
+          content.style.paddingTop = "20px";
+          content.style.paddingBottom = "25px";
+          content.style.maxHeight = content.scrollHeight + 50 + "px";
+        }
+      }
+
+      /**
+       * Muestra u oculta el formulario digital y desplaza la pantalla suavemente
+       */
+      function irAlFormulario() {
+        const formularioElemento = document.getElementById(
+          "seccion-formulario-alondra",
+        );
+
+        if (formularioElemento) {
+          // Si el formulario está oculto, lo mostramos
+          if (
+            formularioElemento.style.display === "none" ||
+            formularioElemento.style.display === ""
+          ) {
+            formularioElemento.style.display = "block";
+
+            // Pequeño tiempo de espera para que la animación de desvanecimiento funcione
+            setTimeout(function () {
+              formularioElemento.style.opacity = "1";
+            }, 10);
+
+            // Desplaza la pantalla suavemente hacia el formulario recién aparecido
+            setTimeout(function () {
+              formularioElemento.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }, 100);
+          } else {
+            // Si ya estaba abierto y vuelven a hacer clic, lo ocultamos suavemente
+            formularioElemento.style.opacity = "0";
+
+            setTimeout(function () {
+              formularioElemento.style.display = "none";
+            }, 400); // Espera a que termine la animación para desaparecerlo por completo
+          }
+        }
+      }
+    </script>
+
+    <!-- ================================================================= -->
+    <!-- PARTE 4: ESTRUCTURA HTML DEL FORMULARIO DIGITAL DE ATENCIÓN       -->
+    <!-- ================================================================= -->
+    <div id="seccion-formulario-alondra" class="formulario-seccion">
+      <div class="formulario-encabezado">
+        <h3 class="formulario-titulo">Formulario de Cambios y Devoluciones</h3>
+        <p class="formulario-descripcion">
+          Completa los datos solicitados para gestionar tu solicitud de manera
+          rápida y ordenada.
+        </p>
+      </div>
+
+      <!-- INICIO DEL FORMULARIO -->
+      <form id="form-cambios-alondra" onsubmit="enviarSolicitud(event)">
+        <!-- BLOQUE 1: DATOS DEL CLIENTE -->
+        <div class="formulario-bloque">
+          <h4 class="bloque-titulo">1. Datos del Cliente</h4>
+          <div class="form-fila-2">
+            <div class="campo-grupo">
+              <label class="campo-label">Nombres y Apellidos Completos *</label>
+              <input
+                type="text"
+                id="alondra-nombre"
+                required
+                class="campo-input"
+                placeholder="Ej. Juan Pérez"
+              />
+            </div>
+            <div class="campo-grupo">
+              <label class="campo-label">Número de DNI o CE *</label>
+              <input
+                type="number"
+                id="alondra-dni"
+                required
+                class="campo-input"
+                placeholder="Ej. 74839201"
+              />
+            </div>
+          </div>
+          <div class="form-fila-2" style="margin-top: 15px">
+            <div class="campo-grupo">
+              <label class="campo-label">WhatsApp de Contacto *</label>
+              <input
+                type="tel"
+                id="alondra-wsp"
+                required
+                class="campo-input"
+                placeholder="Ej. 978948394"
+              />
+            </div>
+            <div class="campo-grupo">
+              <label class="campo-label">Correo Electrónico</label>
+              <input
+                type="email"
+                id="alondra-correo"
+                class="campo-input"
+                placeholder="Ej. juan@correo.com"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- BLOQUE 2: DETALLES DE COMPRA -->
+        <div class="formulario-bloque">
+          <h4 class="bloque-titulo">2. Detalles de la Compra Original</h4>
+          <div class="form-fila-3">
+            <div class="campo-grupo">
+              <label class="campo-label">Fecha de Compra *</label>
+              <input
+                type="date"
+                id="alondra-fecha"
+                required
+                class="campo-input"
+              />
+            </div>
+            <div class="campo-grupo">
+              <label class="campo-label">¿Dónde compró? *</label>
+              <select id="alondra-canal" required class="campo-input">
+                <option value="" disabled selected>Seleccione...</option>
+                <option value="Tienda Física - Galería Manuel Alonzo">
+                  Tienda Física (Galería Manuel Alonzo)
+                </option>
+                <option value="Tienda Online / WhatsApp">
+                  Tienda Online / WhatsApp
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- BLOQUE 3: DETALLE DEL PRODUCTO -->
+        <div class="formulario-bloque">
+          <h4 class="bloque-titulo">3. Detalle del Calzado</h4>
+          <div class="form-fila-3">
+            <div class="campo-grupo">
+              <label class="campo-label">Modelo de Zapatilla *</label>
+              <input
+                type="text"
+                id="alondra-modelo"
+                required
+                class="campo-input"
+                placeholder="Ej. Urbano Irun"
+              />
+            </div>
+            <div class="campo-grupo">
+              <label class="campo-label">Color *</label>
+              <input
+                type="text"
+                id="alondra-color"
+                required
+                class="campo-input"
+                placeholder="Ej. Beige / Azul"
+              />
+            </div>
+            <div class="campo-grupo">
+              <label class="campo-label">Talla Original *</label>
+              <input
+                type="number"
+                id="alondra-talla"
+                required
+                class="campo-input"
+                placeholder="Ej. 40"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- BLOQUE 4: MOTIVO Y SOLICITUD -->
+        <div class="formulario-bloque">
+          <h4 class="bloque-titulo">4. Motivo de la Solicitud</h4>
+          <div class="campo-grupo">
+            <label class="campo-label">Seleccione el motivo principal *</label>
+            <select
+              id="alondra-motivo"
+              required
+              class="campo-input"
+              onchange="verificarCambioTalla(this)"
+            >
+              <option value="" disabled selected>
+                Seleccione un motivo...
+              </option>
+              <option value="Talla Incorrecta">
+                Talla Incorrecta (Me queda chico / grande)
+              </option>
+              <option value="Falla de Fábrica / Garantía">
+                Falla de Fábrica (Aplicar Garantía)
+              </option>
+              <option value="Modelo o Color Distinto">
+                Recibí un modelo o color distinto al solicitado
+              </option>
+              <option value="No cumplió expectativas">
+                No me gustó el diseño al recibirlo
+              </option>
+            </select>
+          </div>
+
+          <!-- Campo dinámico oculto para nueva talla -->
+          <div
+            class="campo-grupo"
+            id="grupo-nueva-talla"
+            style="display: none; margin-top: 15px"
+          >
+            <label class="campo-label" style="color: #c2255c; font-weight: bold"
+              >¿Qué nueva talla o modelo desea solicitar? *</label
+            >
+            <input
+              type="text"
+              id="alondra-nueva-talla"
+              class="campo-input"
+              placeholder="Ej. Deseo cambiar a Talla 41"
+            />
+          </div>
+        </div>
+
+        <!-- NOTA DE RECORDATORIO OPTIMIZADA -->
+        <div
+          class="formulario-nota"
+          style="
+            background-color: #fff9db;
+            border-left: 4px solid #fcc419;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #664d03;
+            line-height: 1.5;
+          "
+        >
+          📌 <strong>Nota Importante:</strong> El calzado devuelto no debe
+          mostrar ninguna señal de uso en la suela y tiene que ser entregado
+          estrictamente en su caja original. <br /><br />
+          📸 <strong>¡No olvides la foto!:</strong> Al presionar el botón de
+          abajo, se abrirá tu WhatsApp. Por favor,
+          <strong>adjunta una foto nítida de tus zapatillas</strong> en el chat
+          para validar tu solicitud de inmediato.
+        </div>
+
+        <!-- BOTÓN DE ENVÍO -->
+        <button type="submit" class="formulario-submit">
+          🚀 Enviar Solicitud a Soporte Alondra
+        </button>
+      </form>
+    </div>
+    <style>
+      /* ================================================================= */
+      /* PARTE 5: ESTILOS CSS PARA EL FORMULARIO DIGITAL                   */
+      /* ================================================================= */
+
+      /* Caja principal del formulario */
+      .formulario-seccion {
+        display: none; /* ⬅️ Esto hace que empiece completamente oculto */
+        opacity: 0; /* ⬅️ Para el efecto de desvanecimiento suave */
+        transition: opacity 0.4s ease-in-out;
+
+        max-width: 750px;
+        margin: 50px auto;
+        padding: 30px 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+        border: 1px solid #e2e8f0;
+      }
+
+      /* Encabezado */
+      .formulario-encabezado {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .formulario-titulo {
+        color: #0f2c59;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+      }
+
+      .formulario-descripcion {
+        color: #666;
+        font-size: 0.95rem;
+      }
+
+      /* Bloques internos y títulos de pasos */
+      .formulario-bloque {
+        margin-bottom: 25px;
+      }
+
+      .bloque-titulo {
+        color: #0f2c59;
+        border-bottom: 2px solid #0f2c59;
+        padding-bottom: 5px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        text-align: left;
+      }
+
+      /* Organización de campos individuales */
+      .campo-grupo {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 100%;
+      }
+
+      .campo-label {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: #4a5568;
+        margin-bottom: 6px;
+      }
+
+      /* Cajas de texto, fechas y menús desplegables */
+      .campo-input {
+        padding: 11px 14px;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        color: #334155;
+        outline: none;
+        background: #f8fafc;
+        transition: all 0.2s ease;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      .campo-input:focus {
+        border-color: #0f2c59;
+        background: #ffffff;
+        box-shadow: 0 0 0 3px rgba(15, 44, 89, 0.15);
+      }
+
+      /* Cuadrículas fluidas (Grids) para computadoras */
+      .form-fila-2 {
+        display: flex;
+        gap: 15px;
+      }
+
+      .form-fila-3 {
+        display: flex;
+        gap: 15px;
+      }
+
+      /* Nota de recordatorio amarilla */
+      .formulario-nota {
+        background-color: #fff9db;
+        border-left: 4px solid #fcc419;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 25px;
+        text-align: left;
+        font-size: 0.9rem;
+        color: #664d03;
+        line-height: 1.5;
+      }
+
+      /* Botón de Enviar a WhatsApp */
+      .formulario-submit {
+        width: 100%;
+        background: #0f2c59;
+        color: white;
+        border: none;
+        padding: 15px;
+        font-size: 1.05rem;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(15, 44, 89, 0.2);
+      }
+
+      .formulario-submit:hover {
+        background: #1d3d6e;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 15px rgba(15, 44, 89, 0.3);
+      }
+
+      /* REGLAS RESPONSIVAS: Convierte las filas en columnas en celulares */
+      @media (max-width: 768px) {
+        .formulario-seccion {
+          padding: 20px 15px;
+          margin: 30px auto;
+        }
+        .formulario-titulo {
+          font-size: 1.4rem;
+        }
+        .form-fila-2,
+        .form-fila-3 {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    </style>
+    <script>
+      // ================================================================= -->
+      // PARTE 6: MÓDULO JAVASCRIPT DE AUTOMATIZACIÓN Y ENVÍO A WHATSAPP
+      // ================================================================= -->
+
+      /**
+       * Muestra u oculta el campo de "Nueva Talla" según la opción elegida
+       */
+      function verificarCambioTalla(select) {
+        const grupoNuevaTalla = document.getElementById("grupo-nueva-talla");
+        const inputNuevaTalla = document.getElementById("alondra-nueva-talla");
+
+        if (
+          select.value === "Talla Incorrecta" ||
+          select.value === "Modelo o Color Distinto"
+        ) {
+          grupoNuevaTalla.style.display = "block";
+          inputNuevaTalla.setAttribute("required", "required");
+        } else {
+          grupoNuevaTalla.style.display = "none";
+          inputNuevaTalla.removeAttribute("required");
+        }
+      }
+
+      function enviarSolicitud(event) {
+        event.preventDefault();
+
+        // 1. Captura de datos exacta
+        var nombre = document.getElementById("alondra-nombre").value;
+        var dni = document.getElementById("alondra-dni").value;
+        var wsp = document.getElementById("alondra-wsp").value;
+        var correo =
+          document.getElementById("alondra-correo").value || "No especificado";
+        var fecha = document.getElementById("alondra-fecha").value;
+        var canal = document.getElementById("alondra-canal").value;
+        var modelo = document.getElementById("alondra-modelo").value;
+        var color = document.getElementById("alondra-color").value;
+        var talla = document.getElementById("alondra-talla").value;
+        var motivo = document.getElementById("alondra-motivo").value;
+        var nuevaTalla =
+          document.getElementById("alondra-nueva-talla").value || "N/A";
+
+        // 2. Construcción del mensaje plano (Garantiza que no se rompa en internet)
+        var mensaje =
+          "👤 *Cliente:* " +
+          nombre +
+          "\n" +
+          "🪪 *DNI:* " +
+          dni +
+          "\n" +
+          "📱 *Teléfono:* " +
+          wsp +
+          "\n" +
+          "✉️ *Correo:* " +
+          correo +
+          "\n\n" +
+          "📦 *DATOS DE COMPRA:*\n" +
+          "📆 *Fecha de Compra:* " +
+          fecha +
+          "\n" +
+          "🏬 *Canal:* " +
+          canal +
+          "\n\n" +
+          "👟 *DETALLE DEL PRODUCTO:*\n" +
+          "🔹 *Modelo:* " +
+          modelo +
+          "\n" +
+          "🎨 *Color:* " +
+          color +
+          "\n" +
+          "📏 *Talla original:* " +
+          talla +
+          "\n\n" +
+          "❓ *MOTIVO DE SOLICITUD:*\n" +
+          "🔸 *Razón:* " +
+          motivo +
+          "\n";
+
+        if (nuevaTalla !== "N/A") {
+          mensaje += "🔄 *Preferencia de Cambio:* " + nuevaTalla + "\n";
+        }
+
+        mensaje +=
+          "\n━━━━━━━━━━━━━━━━━━━━━━\n" +
+          "📸 *RECUERDA ADJUNTAR LA FOTO DE TU ZAPATILLA AQUÍ EN EL CHAT*";
+
+        // 3. Enlace con el número de destino corregido al 100%
+        var numero = "51946458737";
+        var urlFinal =
+          "https://whatsapp.com" +
+          numero +
+          "&text=" +
+          encodeURIComponent(mensaje);
+
+        // 4. Disparo inmediato a WhatsApp
+        window.open(urlFinal, "_blank");
+      }
+    </script>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Columna 1: Sobre la tienda -->
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo"
+            >ALONDRA<span>Zapatería</span></a
+          >
+          <p class="footer-description">
+            Tu tienda de confianza con el catálogo más grande de zapatillas
+            nacionales e importadas. Calidad, variedad y los mejores precios del
+            mercado.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Categorías Rápidas -->
+        <div class="footer-col">
+          <h3>Categorías</h3>
+          <ul class="footer-links">
+            <li><a href="varon.html">Zapatillas Varón</a></li>
+            <li><a href="mujer.html">Zapatillas Mujer</a></li>
+            <li><a href="nino.html">Zapatillas Niño</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soporte y Ayuda -->
+        <div class="footer-col">
+          <h3>Soporte</h3>
+          <ul class="footer-links">
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="tiendas.html">Nuestras Tiendas</a></li>
+            <li><a href="#">Políticas de Cambio</a></li>
+            <li><a href="emprendedores.html">Zona Emprendedores</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Métodos de Pago y Seguridad -->
+        <div class="footer-col">
+          <h3>Pagos Seguros</h3>
+          <p class="footer-text">
+            Aceptamos todas las tarjetas de crédito, débito y transferencias
+            bancarias nacionales.
+          </p>
+          <div class="payment-methods">
+            <i class="fab fa-cc-visa" title="Visa"></i>
+            <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+            <i class="fab fa-cc-amex" title="American Express"></i>
+            <i
+              class="fas fa-money-bill-wave"
+              title="Efectivo/Transferencia"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior de Derechos Reservados -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 ALONDRA ZAPATERÍA. Todos los derechos reservados.</p>
+          <p>Diseñado para potenciar tu negocio.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- INTERACCIÓN MENÚ -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("mobile-menu");
+        const navMenu = document.getElementById("nav-menu");
+        if (menuToggle && navMenu) {
+          menuToggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            navMenu.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
